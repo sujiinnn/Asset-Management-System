@@ -99,12 +99,12 @@ public class UserMainScreen extends javax.swing.JFrame {
 
     private void addAccountbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addAccountbtnActionPerformed
         // TODO add your handling code here:
-
+        new AddAccount();
     }//GEN-LAST:event_addAccountbtnActionPerformed
 
     private void depositbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_depositbtnActionPerformed
         // TODO add your handling code here:
-         
+
     }//GEN-LAST:event_depositbtnActionPerformed
 
     private void TotalAssetbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TotalAssetbtnActionPerformed

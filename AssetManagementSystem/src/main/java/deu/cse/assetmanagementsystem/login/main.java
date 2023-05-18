@@ -1,6 +1,8 @@
 package deu.cse.assetmanagementsystem.login;
 
 
+import deu.cse.assetmanagementsystem.user.AddAccount;
+import deu.cse.assetmanagementsystem.user.UserMainScreen;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -148,6 +150,9 @@ public class main extends javax.swing.JFrame {
                 break;
             case 2:
                 JOptionPane.showMessageDialog(null, "로그인 성공");
+                new UserMainScreen();
+                AddAccount.setUser(jTextField1.getText());//account 클래스와 연결
+                dispose();
                 break;
             case 0:
                 JOptionPane.showMessageDialog(null, "로그인 실패");
