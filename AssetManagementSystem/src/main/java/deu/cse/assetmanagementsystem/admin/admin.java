@@ -12,6 +12,7 @@ package deu.cse.assetmanagementsystem.admin;
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
+import deu.cse.assetmanagementsystem.category_Factory.*;
 
 public class admin extends JFrame {
 
@@ -34,6 +35,7 @@ public class admin extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 //카테고리 추가
+                new CategoryManager_gui();
             }
         });
 
