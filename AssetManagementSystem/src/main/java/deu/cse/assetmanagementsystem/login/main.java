@@ -1,16 +1,10 @@
 package deu.cse.assetmanagementsystem.login;
 
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-import javax.swing.JFrame;
-import javax.swing.JOptionPane;
+import java.io.*;
+import java.util.*;
+import javax.swing.*;
+import deu.cse.assetmanagementsystem.admin.admin;
 
 public class main extends javax.swing.JFrame {
 
@@ -145,6 +139,7 @@ public class main extends javax.swing.JFrame {
         switch (CheckAuth(jTextField1.getText(), jPasswordField1.getText())) {
             case 1:
                 JOptionPane.showMessageDialog(null, "관리자 로그인 성공");
+                new admin();
                 break;
             case 2:
                 JOptionPane.showMessageDialog(null, "로그인 성공");
