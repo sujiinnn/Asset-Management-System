@@ -12,6 +12,7 @@ package deu.cse.assetmanagementsystem.admin;
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
+import deu.cse.assetmanagementsystem.member_mgmt.*;
 
 public class admin extends JFrame {
 
@@ -41,6 +42,7 @@ public class admin extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 //회원정보관리
+                new member_mgmt();
             }
         });
     }
