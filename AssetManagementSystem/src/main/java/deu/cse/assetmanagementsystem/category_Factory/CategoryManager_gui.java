@@ -18,8 +18,19 @@ import java.io.*;
 public class CategoryManager_gui extends JFrame {
     
     private JComboBox<CategoryFactory_creator> comboBox;
-    private JComboBox<Category_product> registeredComboBox;
+    private JComboBox<Category_product> registeredComboBox; 
     
+     private void clearFileContent(String filename) {//덮어씌워주는 메소드
+        try {
+            // 지정된 파일을 생성하여 기존 내용을 삭제
+            FileWriter writer = new FileWriter(filename);
+            writer.write("");  // 내용을 빈 문자열로 덮어씀
+            writer.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+     
     public CategoryManager_gui() {
         // GUI 구성 요소 초기화
         comboBox = new JComboBox<>();
@@ -78,6 +89,7 @@ public class CategoryManager_gui extends JFrame {
         renewal_category.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 try {
+                    clearFileContent("addedcategory.txt");
                     
                     BufferedWriter a = new BufferedWriter(new FileWriter("addedcategory.txt", true));
                     for (int i = 0; i < registeredComboBox.getItemCount(); i++) {
@@ -85,7 +97,7 @@ public class CategoryManager_gui extends JFrame {
                     }
                     a.write("\n");
                     a.close();
-                    JOptionPane.showMessageDialog(null, "카테고리 갱신 완료~");
+                    JOptionPane.showMessageDialog(null, "> 카테고리 갱신 완료 <");
                     //dispose();
                     
                 } catch (Exception ex) {
